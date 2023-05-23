@@ -4,11 +4,11 @@ This repository is a template for creating TypeScript libraries which can be pub
 
 # ✨ Features
 
-🔥 **ESM First**
-📝 **Extensive ESLint Rules**:
-:octocat: **Github Actions**:
-🪢 **Typescript Path Aliases**:
-🏎️ **Super Fast Tests**:
+- 🔥 **ESM First**
+- 📝 **Extensive ESLint Rules**
+- :octocat: **Github Actions**
+- 🪢 **Typescript Path Aliases**
+- 🏎️ **Super Fast Tests**
 
 # Using this template
 
