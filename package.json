@@ -32,8 +32,8 @@
     "format:fix": "prettier --write \"source/**/*.ts\"",
     "lint": "eslint . --ext .ts",
     "lint:fix": "run-s \"lint -- --fix\"",
-    "prepublishOnly": "run-s clean build",
-    "preversion": "run-s clean lint test build",
+    "prepublishOnly": "run-s build",
+    "preversion": "run-s lint test build",
     "test": "vitest run",
     "test:integration": "vitest run integration --coverage",
     "test:unit": "vitest run unit --coverage"
