@@ -1,0 +1,30 @@
+name: Integration
+
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+  schedule:
+    - cron: '0 20 * * *'
+
+jobs:
+  test:
+    name: node@${{ matrix.node-version }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ['16', '18', '20']
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run test:integration
+      - uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: integration
