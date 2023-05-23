@@ -1,6 +1,6 @@
-# Introduction
+# TS Lib Starter
 
-This repository is a template for creating TypeScript libraries which can be published to NPM. It includes preconfigured npm scripts that will assist with development, testing, and deployment of your library.
+A lightweight and customizable starter kit for building TypeScript libraries. It comes with ESM support, flexible configuration options, extensive ESLint rules, and built-in Github Actions integration to automate the build checks, tests, and package publishing process. With TypeScript path aliases and speedy test capabilities, developers can easily create high-quality, performant libraries using this starter kit.
 
 # ✨ Features
 
