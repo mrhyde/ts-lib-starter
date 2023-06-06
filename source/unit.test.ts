@@ -1,4 +1,4 @@
-import { quote } from '~/index'
+import { quote } from '~/index.ts'
 
 describe('index', () => {
   it('phrase', () => {
