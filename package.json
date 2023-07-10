@@ -51,11 +51,11 @@
   "devDependencies": {
     "@2bad/tsconfig": "2.0.0",
     "@swc/cli": "0.1.62",
-    "@swc/core": "1.3.67",
-    "@types/node": "20.3.3",
-    "@typescript-eslint/eslint-plugin": "5.60.1",
-    "@typescript-eslint/parser": "5.60.1",
-    "@vitest/coverage-v8": "0.32.2",
+    "@swc/core": "1.3.68",
+    "@types/node": "20.4.1",
+    "@typescript-eslint/eslint-plugin": "5.61.0",
+    "@typescript-eslint/parser": "5.61.0",
+    "@vitest/coverage-v8": "0.33.0",
     "eslint": "8.44.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-config-standard-with-typescript": "35.0.0",
@@ -69,10 +69,10 @@
     "npm-run-all": "4.1.5",
     "prettier": "2.8.8",
     "rimraf": "5.0.1",
-    "tsc-alias": "1.8.6",
+    "tsc-alias": "1.8.7",
     "typescript": "5.1.6",
     "vite-tsconfig-paths": "4.2.0",
-    "vitest": "0.32.2"
+    "vitest": "0.33.0"
   },
   "engines": {
     "node": ">=18"
