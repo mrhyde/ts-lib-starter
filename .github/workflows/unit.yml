@@ -1,4 +1,4 @@
-name: Integration
+name: Unit
 
 on:
   push:
@@ -23,8 +23,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm run test:integration
+      - run: npm run test:unit
       - uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          flags: integration
+          flags: unit
