@@ -1,1 +1,3 @@
-export const quote = 'Where no man has gone before'
+import { go, where } from '~/quotes/parts.ts'
+
+export const quote = `${go} ${where}`
