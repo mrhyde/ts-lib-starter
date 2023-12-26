@@ -7,24 +7,24 @@ on:
       - '*.md'
 
 jobs:
-  test:
-    name: node@${{ matrix.node-version }}
+  build:
+    name: build on node@${{ matrix.node-version }}
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: ['18', '20']
+        node-version:
+          - 20
+          - 21
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8 # v4
         with:
           node-version: ${{ matrix.node-version }}
+
       - run: npm ci
       - run: npm run check
-      - run: npm run test:unit
-      - uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          flags: unit
       - run: npm run build

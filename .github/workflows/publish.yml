@@ -1,20 +1,27 @@
 name: Publish
+
 on:
- release:
-   types: [published]
+  release:
+    types: [published]
 
 jobs:
   publish:
+    name: publish
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       id-token: write
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8 # v4
         with:
           node-version-file: 'package.json'
           registry-url: 'https://registry.npmjs.org'
+
       - run: npm ci
       - run: npm publish --provenance --access public
         env:
