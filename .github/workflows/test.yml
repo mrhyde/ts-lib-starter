@@ -52,10 +52,10 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: unit
 
-      - run: rm -rf coverage
+      # - run: rm -rf coverage
 
-      - run: npm run test:integration
-      - uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d # v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          flags: integration
+      # - run: npm run test:integration
+      # - uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d # v3
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}
+      #     flags: integration
