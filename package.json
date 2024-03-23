@@ -31,19 +31,19 @@
     "build"
   ],
   "scripts": {
+    "prebuild": "rimraf build",
     "build": "run-p build:*",
     "build:swc": "swc ./source -d ./build --strip-leading-paths",
     "build:types": "tsc --project tsconfig.build.json",
+    "postbuild": "run-s fix:alias fix:ext",
     "check": "run-p check:*",
     "check:code": "eslint . --ext .ts --report-unused-disable-directives --max-warnings 0",
     "check:format": "prettier --check 'source/**/*.ts'",
     "fix": "run-s fix:code fix:format",
     "fix:alias": "tsc-alias -p tsconfig.build.json",
-    "fix:code": "run-s 'lint -- --fix'",
+    "fix:code": "run-s 'check:code -- --fix'",
     "fix:ext": "./fix-ext.sh",
     "fix:format": "prettier --write 'source/**/*.ts'",
-    "postbuild": "run-s fix:alias fix:ext",
-    "prebuild": "rimraf build",
     "prepublishOnly": "run-s build",
     "preversion": "run-s check test build",
     "test": "vitest run",
@@ -82,12 +82,12 @@
     "vite-tsconfig-paths": "4.3.2",
     "vitest": "1.4.0"
   },
+  "packageManager": "npm@10.5.0",
   "engines": {
     "node": ">=20"
   },
   "volta": {
     "node": "20.11.1",
     "npm": "10.5.0"
-  },
-  "packageManager": "npm@10.5.0"
+  }
 }
