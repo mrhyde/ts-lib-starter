@@ -33,9 +33,9 @@
   "scripts": {
     "prebuild": "rimraf build",
     "build": "run-p build:*",
+    "postbuild": "run-s fix:alias fix:ext",
     "build:swc": "swc ./source -d ./build --strip-leading-paths",
     "build:types": "tsc --project tsconfig.build.json",
-    "postbuild": "run-s fix:alias fix:ext",
     "check": "run-p check:*",
     "check:code": "eslint . --ext .ts --report-unused-disable-directives --max-warnings 0",
     "check:format": "prettier --check 'source/**/*.ts'",
