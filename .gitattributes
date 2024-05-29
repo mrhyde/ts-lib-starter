@@ -1,2 +1,2 @@
-eslint.config.mjs linguist-vendored=false
-fix-ext.sh linguist-vendored=false
+eslint.config.mjs linguist-vendored
+fix-ext.sh linguist-vendored
