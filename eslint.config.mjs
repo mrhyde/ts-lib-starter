@@ -1,6 +1,5 @@
 import love from 'eslint-config-love'
 import jsdoc from 'eslint-plugin-jsdoc'
-import prettier from 'eslint-plugin-prettier/recommended'
 import vitest from 'eslint-plugin-vitest'
 
 export default [
@@ -10,7 +9,6 @@ export default [
   },
   jsdoc.configs['flat/recommended-typescript-error'],
   love,
-  prettier,
   // general
   {
     rules: {
