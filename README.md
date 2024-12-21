@@ -1,39 +1,81 @@
-# TS Lib Starter
+# TypeScript Library Starter
 
-A lightweight and customizable starter kit for building TypeScript libraries. It comes with ESM support, flexible configuration options, extensive ESLint rules, and built-in Github Actions integration to automate the build checks, tests, and package publishing process. With TypeScript path aliases and speedy test capabilities, developers can easily create high-quality, performant libraries using this starter kit.
+A modern, zero-config template for building high-quality TypeScript libraries. Built with ESM-first architecture and powered by SWC for blazing-fast compilation, this starter kit provides everything you need to create, test, and publish professional TypeScript packages.
 
-# ✨ Features
+## ✨ Key Features
 
-- 🔥 **ESM First**
-- 📝 **Extensive ESLint Rules**
-- :octocat: **Github Actions**
-- 🪢 **Typescript Path Aliases**
-- 🏎️ **Super Fast Tests**
+- **⚡️ Lightning-Fast Build Pipeline**
+  - SWC-powered compilation for rapid development cycles
+  - Optimized TypeScript configuration with path aliases
+  - Streamlined build process with parallel execution
 
-# Using this template
+- **🔍 Comprehensive Quality Tools**
+  - Biome for fast, consistent code formatting and linting
+  - Extensive ESLint configuration for code quality (powered by [axiom](https://github.com/2BAD/axiom))
+  - Integrated test runner with coverage reporting
 
-- Search `ts-lib-starter` and replace it with your custom package name.
-- Search `2BAD` and replace it with your name. (be careful not to replace `@2bad/tsconfig` references)
+- **📦 Modern Package Development**
+  - ESM-first architecture
+  - Automatic type declaration generation
+  - Properly configured package exports
+  - GitHub Actions workflow ready
 
-# Package Choices
+- **🛠 Developer Experience**
+  - Zero configuration needed to get started
+  - Type-safe development with strict TypeScript settings
+  - Hot-reloading test environment with Vitest
+  - Automated version management and publishing
 
-The packages chosen for this project include some of the most popular and widely used tools for TypeScript development:
+## Getting Started
 
-- **typescript**: a superset of JavaScript that adds type annotations to improve code quality, readability, and maintainability.
-- **eslint**: a tool for identifying and reporting on patterns found in code. It's highly configurable and can be customized according to different coding standards. Comes preconfigured with plugins for linting tests, jsdoc blocks, and TypeScript itself.
-- **prettier**: an opinionated code formatter that ensures consistent formatting across the entire codebase.
-- **npm-run-all**: a CLI tool that allows you to run multiple npm scripts sequentially or in parallel.
-- **tsc-alias**: a TypeScript plugin that provides easy-to-use aliases for import statements without requiring complex configurations in Webpack or other build tools.
-- **vitest**: a testing framework that includes functionality for both unit and integration tests.
+1. Click "Use this template" on GitHub
+2. Clone your new repository
+3. Search and replace the following:
+   - `ts-lib-starter` → your package name
+   - `2BAD` → your name/organization (except `@2bad/tsconfig` references)
+4. Run `npm install`
+5. Start developing!
 
-# NPM Scripts
+## Available Scripts
 
-Here are the npm scripts included in this project:
+```bash
+# Development
+npm run test        # Run all tests
+npm run test:unit   # Run unit tests with coverage
+npm run build       # Build the library
+npm run check       # Run all code quality checks
 
-- **build**: cleans the ./build directory, compiles TypeScript code to JavaScript, and applies aliases.
-- **format:check**: checks if TypeScript files are formatted according to Prettier standards.
-- **format:fix**: automatically fixes formatting issues using Prettier.
-- **lint**: lints TypeScript files with eslint (including tests and jsdoc blocks).
-- **lint:fix**: automatically fixes linting errors found by eslint.
-- **prepublishOnly**: prepares for publishing by running the build scripts.
-- **preversion**: runs clean, lint, test, and build scripts before publishing a new version.
+# Maintenance
+npm run fix         # Auto-fix all code style issues
+npm run fix:format  # or just the format code with Biome
+```
+
+## Package Structure
+
+```
+├── source/         # Source code
+├── tests/          # Test files
+├── build/          # Compiled output (generated)
+└── package.json    # Package configuration
+```
+
+## Why Use This Template?
+
+- **Performance First**: SWC compilation is significantly faster than traditional TypeScript compilation
+- **Modern Standards**: Built with current best practices and modern JavaScript features
+- **Quality Focused**: Comprehensive testing and linting setup ensures high-quality code
+- **Production Ready**: Includes all necessary configurations for building and publishing packages
+- **Actively Maintained**: Regular updates to dependencies and features
+
+## Requirements
+
+- Node.js >= 20
+- npm >= 10.8.3
+
+## License
+
+MIT © 2BAD
+
+---
+
+This template is part of the [@2bad](https://github.com/2BAD) ecosystem of development tools.
