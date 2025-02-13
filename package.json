@@ -51,7 +51,7 @@
     "test:unit": "vitest run unit --coverage"
   },
   "devDependencies": {
-    "@2bad/axiom": "1.0.0-beta.10",
+    "@2bad/axiom": "1.0.0-beta.12",
     "@2bad/tsconfig": "3.0.1",
     "@2bad/tsfix": "0.1.0",
     "@biomejs/biome": "1.9.4",
